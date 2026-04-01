@@ -1,0 +1,13 @@
+# Keil generated files
+*.obj
+*.lst
+*.lnp
+*.htm
+*.build_log.htm
+*.dep
+*.axf
+*.sct
+*.map
+*.uvguix.*
+Objects/
+Listings/
