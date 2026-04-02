@@ -340,7 +340,7 @@
               <MiscControls>--diag_suppress=68,111,188,223,546,1295</MiscControls>
               <Define>HXTAL_VALUE=8000000,</Define>
               <Undefine></Undefine>
-              <IncludePath>.\GD32H7xx_standard_peripheral\Include;.\GD32H7xx;.\GD32H7xx\CMSIS;.;.\Drivers;.\FATFS;.\lvgl;.\lvgl\src;.\lvgl\examples\porting;.\lvgl\demos\benchmark;.\lvgl\demos\stress</IncludePath>
+              <IncludePath>.\GD32H7xx_standard_peripheral\Include;.\GD32H7xx;.\GD32H7xx\CMSIS;.;.\Drivers;.\FATFS;.\lvgl;.\lvgl\src;.\lvgl\examples\porting;.\lvgl\demos\benchmark;.\lvgl\demos\stress;.\common;.\gameapi;.\mock;.\assets</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1418,6 +1418,42 @@
               <FileName>lv_textarea.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\lvgl\src\widgets\lv_textarea.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>common</GroupName>
+          <Files>
+            <File>
+              <FileName>game_api.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\common\game_api.h</FilePath>
+            </File>
+            <File>
+              <FileName>game_type.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\common\game_type.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>gameapi</GroupName>
+        </Group>
+        <Group>
+          <GroupName>assets</GroupName>
+        </Group>
+        <Group>
+          <GroupName>mock</GroupName>
+          <Files>
+            <File>
+              <FileName>mock_game.config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\mock\mock_game.config.h</FilePath>
+            </File>
+            <File>
+              <FileName>mock_game_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\mock\mock_game_api.c</FilePath>
             </File>
           </Files>
         </Group>
