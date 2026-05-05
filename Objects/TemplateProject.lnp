@@ -6,7 +6,6 @@
 ".\objects\lv_font_bechmark_montserrat_12_compr_az.c.o"
 ".\objects\lv_font_bechmark_montserrat_16_compr_az.c.o"
 ".\objects\read_file_to_array.o"
-".\objects\hang2hang.o"
 ".\objects\gd32h7xx_misc.o"
 ".\objects\gd32h7xx_gpio.o"
 ".\objects\gd32h7xx_rcu.o"
@@ -194,6 +193,11 @@
 ".\objects\lv_switch.o"
 ".\objects\lv_table.o"
 ".\objects\lv_textarea.o"
+".\objects\mock_game_api.o"
+".\objects\game_start.o"
+".\objects\ui_game_screen.o"
+".\objects\ui_pig_to_big.o"
+".\objects\ui_pig_to_small.o"
 --strict --scatter ".\Objects\TemplateProject.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

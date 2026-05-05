@@ -1,8 +1,9 @@
 #include "drivers.h"
 #include "lv_port_disp_template.h"
 #include "lv_port_indev_template.h"
+#include "game_api.h"
 
-void Hang2Hang();
+pig_t pig[10];
 
 int main()
 {
@@ -18,8 +19,7 @@ int main()
 		lv_port_indev_init();
 		
 
-		Hang2Hang();
-
+		ui_game_start(); 
 
 		while(1){
 			

@@ -134,14 +134,14 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>-1</DriverSelection>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
-          <pFcarmGrp></pFcarmGrp>
+          <pFcarmGrp>MAIN</pFcarmGrp>
           <pFcArmRoot></pFcArmRoot>
           <FcArmLst>0</FcArmLst>
         </Utilities>
@@ -418,11 +418,6 @@
               <FileName>read_file_to_array.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\read_file_to_array.c</FilePath>
-            </File>
-            <File>
-              <FileName>Hang2Hang.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Hang2Hang.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1437,9 +1432,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>gameapi</GroupName>
-        </Group>
-        <Group>
           <GroupName>assets</GroupName>
         </Group>
         <Group>
@@ -1454,6 +1446,31 @@
               <FileName>mock_game_api.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\mock\mock_game_api.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>game_ui</GroupName>
+          <Files>
+            <File>
+              <FileName>game_start.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\game_ui\game_start.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_game_screen.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\game_ui\ui_game_screen.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_pig_to_big.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\game_ui\ui_pig_to_big.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_pig_to_small.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\game_ui\ui_pig_to_small.c</FilePath>
             </File>
           </Files>
         </Group>
