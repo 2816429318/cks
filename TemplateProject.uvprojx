@@ -1472,6 +1472,11 @@
               <FileType>1</FileType>
               <FilePath>.\game_ui\ui_pig_to_small.c</FilePath>
             </File>
+            <File>
+              <FileName>ui_feed.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\game_ui\ui_feed.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

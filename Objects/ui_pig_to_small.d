@@ -1,4 +1,4 @@
-.\objects\ui_pig_to_small.o: ui_pig_to_small.c
+.\objects\ui_pig_to_small.o: game_ui\ui_pig_to_small.c
 .\objects\ui_pig_to_small.o: .\lvgl\lvgl.h
 .\objects\ui_pig_to_small.o: .\lvgl\src/misc/lv_log.h
 .\objects\ui_pig_to_small.o: .\lvgl\src/misc/../lv_conf_internal.h
