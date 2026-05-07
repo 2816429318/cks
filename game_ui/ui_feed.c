@@ -4,7 +4,7 @@
 #include "lv_port_indev_template.h"
 #include "game_api.h"
 
-extern lv_img_dsc_t image_fruit[3];
+extern lv_img_dsc_t image_fruit1,image_fruit2,image_fruit3;
 
 static lv_obj_t *target_pig = NULL;
 static lv_obj_t *food_obj = NULL;
@@ -85,8 +85,6 @@ static void anim_food_flash_shake(lv_anim_t *anim)
 
 void pig_feed_anim(int pig_idx, int fruit_idx)
 {
-	pig_idx=0;
-	fruit_idx=0;
 	
     target_pig = pig[pig_idx].img_pig;
     flash_count = 0;
@@ -113,7 +111,12 @@ void pig_feed_anim(int pig_idx, int fruit_idx)
 
     // ===================== 食物 =====================
     food_obj = lv_img_create(lv_scr_act());
-    lv_img_set_src(food_obj, &image_fruit[fruit_idx]);
+    if(fruit_idx == 0)
+        lv_img_set_src(food_obj, &image_fruit1);
+    else if(fruit_idx == 1)
+        lv_img_set_src(food_obj, &image_fruit2);
+    else if(fruit_idx == 2)
+        lv_img_set_src(food_obj, &image_fruit3);
     
     base_food_x = x + FOOD_OFFSET_X;
     base_food_y = y + FOOD_OFFSET_Y;

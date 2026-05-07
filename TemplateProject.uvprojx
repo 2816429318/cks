@@ -1477,6 +1477,11 @@
               <FileType>1</FileType>
               <FilePath>.\game_ui\ui_feed.c</FilePath>
             </File>
+            <File>
+              <FileName>ui_fruit.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\game_ui\ui_fruit.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

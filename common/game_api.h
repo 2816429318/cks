@@ -16,5 +16,6 @@ void ui_game_screen(lv_event_t *e);
 void pig_grow_anim(int pig_idx);
 void pig_small_anim(int pig_idx);
 void pig_feed_anim(int pig_idx,int fruit_idx);
+void fruit_cb(lv_event_t *e);
 
 #endif

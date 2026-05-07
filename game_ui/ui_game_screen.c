@@ -5,7 +5,7 @@
 #include "game_api.h"
 
 lv_img_dsc_t image_struct,image_pig_small,image_pig_big;
-lv_img_dsc_t image_fruit[3];
+lv_img_dsc_t image_fruit1,image_fruit2,image_fruit3;
 
 // create image of big pig and small pig, and store them in image_pig_big and image_pig_small
 void create_pig_images(void)
@@ -36,33 +36,33 @@ void create_fruit_images(void)
 {
 	uint8_t* image_buffer = sdram_malloc( 60 * 71 * 3 + 4 );
 	read_file_to_array("0:/fruit1.bin", image_buffer,  60 * 71 * 3 + 4 );
-	image_fruit[0].header.always_zero = 0;
-	image_fruit[0].header.cf = LV_IMG_CF_TRUE_COLOR_ALPHA;
-	image_fruit[0].header.w = 60;
-	image_fruit[0].header.h = 71;
-	image_fruit[0].header.reserved = 0;
-	image_fruit[0].data_size = 60 * 71 * 3;
-	image_fruit[0].data = image_buffer + 4;
+	image_fruit1.header.always_zero = 0;
+	image_fruit1.header.cf = LV_IMG_CF_TRUE_COLOR_ALPHA;
+	image_fruit1.header.w = 60;
+	image_fruit1.header.h = 71;
+	image_fruit1.header.reserved = 0;
+	image_fruit1.data_size = 60 * 71 * 3;
+	image_fruit1.data = image_buffer + 4;
 
-	image_buffer = sdram_malloc( 66 * 63 * 3 + 4 );
-	read_file_to_array("0:/fruit2.bin", image_buffer,  66 * 63 * 3 + 4 );
-	image_fruit[1].header.always_zero = 0;
-	image_fruit[1].header.cf = LV_IMG_CF_TRUE_COLOR_ALPHA;
-	image_fruit[1].header.w = 66;
-	image_fruit[1].header.h = 63;
-	image_fruit[1].header.reserved = 0;
-	image_fruit[1].data_size = 66 * 63 * 3;
-	image_fruit[1].data = image_buffer + 4;
+	image_buffer = sdram_malloc( 66 * 68 * 3 + 4 );
+	read_file_to_array("0:/fruit2.bin", image_buffer,  66 * 68 * 3 + 4 );
+	image_fruit2.header.always_zero = 0;
+	image_fruit2.header.cf = LV_IMG_CF_TRUE_COLOR_ALPHA;
+	image_fruit2.header.w = 66;
+	image_fruit2.header.h = 68;
+	image_fruit2.header.reserved = 0;
+	image_fruit2.data_size = 66 * 68 * 3;
+	image_fruit2.data = image_buffer + 4;
 
 	image_buffer = sdram_malloc( 68 * 73 * 3 + 4 );
 	read_file_to_array("0:/fruit3.bin", image_buffer,  68 * 73 * 3 + 4 );
-	image_fruit[2].header.always_zero = 0;
-	image_fruit[2].header.cf = LV_IMG_CF_TRUE_COLOR_ALPHA;
-	image_fruit[2].header.w = 68;
-	image_fruit[2].header.h = 73;
-	image_fruit[2].header.reserved = 0;
-	image_fruit[2].data_size = 68 * 73 * 3;
-	image_fruit[2].data = image_buffer + 4;
+	image_fruit3.header.always_zero = 0;
+	image_fruit3.header.cf = LV_IMG_CF_TRUE_COLOR_ALPHA;
+	image_fruit3.header.w = 68;
+	image_fruit3.header.h = 73;
+	image_fruit3.header.reserved = 0;
+	image_fruit3.data_size = 68 * 73 * 3;
+	image_fruit3.data = image_buffer + 4;
 }
 
 //	pig shack animation
@@ -124,8 +124,16 @@ void ui_game_screen(lv_event_t *e)
 		pig_shack_anim(i);
 	}
 
-	//create fruit images
+	//fruit
 	create_fruit_images();
+	lv_obj_t *btn_fruit[3];
+	for(int i=0;i<3;i++){
+		btn_fruit[i] = lv_btn_create(game_screen);
+		lv_obj_set_size(btn_fruit[i], 110, 100);
+		lv_obj_align(btn_fruit[i], LV_ALIGN_TOP_LEFT, 328+i*128, 497);
+		lv_obj_add_event_cb(btn_fruit[i],fruit_cb, LV_EVENT_PRESSED, (void*)i);
+		lv_obj_set_style_opa(btn_fruit[i], LV_OPA_0, 0);
+	}
 
 	//测试代码，后续会删除
 	lv_obj_t *btn_back1 = lv_btn_create(game_screen);
