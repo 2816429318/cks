@@ -75,7 +75,7 @@ static void pig_shake_anim_callback(void* var, int32_t v)
 // 抖动函数（现在只需要猪的索引）
 void pig_shack_anim(int pig_idx)
 {
-    lv_obj_t *pig_img = pig[pig_idx].img_pig;
+   // lv_obj_t *pig_img = pig[pig_idx].img_pig;
 
     lv_anim_t anim;
     lv_anim_init(&anim);
@@ -131,7 +131,7 @@ void ui_game_screen(lv_event_t *e)
 		btn_fruit[i] = lv_btn_create(game_screen);
 		lv_obj_set_size(btn_fruit[i], 110, 100);
 		lv_obj_align(btn_fruit[i], LV_ALIGN_TOP_LEFT, 328+i*128, 497);
-		lv_obj_add_event_cb(btn_fruit[i],fruit_cb, LV_EVENT_PRESSED, (void*)i);
+		lv_obj_add_event_cb(btn_fruit[i],fruit_cb, LV_EVENT_ALL, (void*)i);
 		lv_obj_set_style_opa(btn_fruit[i], LV_OPA_0, 0);
 	}
 

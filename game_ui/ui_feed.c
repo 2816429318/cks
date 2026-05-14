@@ -85,7 +85,7 @@ static void anim_food_flash_shake(lv_anim_t *anim)
 
 void pig_feed_anim(int pig_idx, int fruit_idx)
 {
-	
+
     target_pig = pig[pig_idx].img_pig;
     flash_count = 0;
 
